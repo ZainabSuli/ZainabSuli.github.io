@@ -8,12 +8,12 @@ a {
   }
 
   a:hover {
-    color: rgb(248, 124, 201);  /* set the text color to red here */
+    color: rgb(203 57 57);  /* set the text color to red here */
     text-decoration: none; /* This means we do not want hyperlinks to be underlined */
   }
 
   body{
-    background-color: beige; /* set the background color here */
+    background-color:  #ededd9;/* set the background color here */
 
     color: black; /* set the text color to black here */
     font-family: Arial, Helvetica, sans-serif;/* set the font here */
