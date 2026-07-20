@@ -3,10 +3,34 @@
    Professional CSS
 ========================== */
 
+/* Reset / Box sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Design Tokens */
+
+:root {
+    --color-heading: #0f172a;
+    --color-subheading: #1f2e2e;
+    --color-text: #334d4d;
+    --color-muted: #667788;
+    --color-accent: #fca312;
+    --color-link: #0a66c2;
+
+    --bg-page: #e0ebeb;
+    --bg-card: #f0f5f5;
+
+    --border-color: #d9d9d9;
+}
+
 /* Page */
 
 html {
-    background-color: #eef2f7;
+    background-color: var(--bg-page);
 }
 
 body {
@@ -14,41 +38,64 @@ body {
     margin: 40px auto;
     padding: 45px;
 
-    background: #ffffff;
-    color: #333;
+    background: var(--bg-card);
+    color: var(--color-text);
 
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", "Tajawal", "Cairo", Tahoma, Arial, Helvetica, sans-serif;
     line-height: 1.8;
 
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.10);
+
+    text-align: left; /* بدّليها left/right حسب اتجاه المحتوى الأساسي */
+}
+
+/* Header block - يلف الاسم والمسمى الوظيفي */
+
+.resume-header {
+    text-align: center;
+}
+
+/* Visually hidden - نص للقارئات الصوتية فقط، مخفي بصريًا */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
 }
 
 /* Links */
 
 a {
-    color: #0a66c2;
+    color: var(--color-link);
     text-decoration: none;
     font-weight: 600;
-    transition: .3s;
+    transition: color .3s ease;
 }
 
 a:hover {
-    color: #084298;
+    color: var(--color-accent);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 /* Headings */
 
 h1 {
-    text-align: center;
-    color: #0f172a;
+    color: var(--color-heading);
     font-size: 40px;
     margin-bottom: 8px;
 }
 
 h2 {
-    color: #0a66c2;
-    border-bottom: 2px solid #0a66c2;
+    color: var(--color-subheading);
+    border-bottom: 1px solid var(--color-subheading);
     padding-bottom: 8px;
     margin-top: 45px;
     margin-bottom: 20px;
@@ -68,15 +115,14 @@ h4 {
 }
 
 h5 {
-    color: #777;
+    color: var(--color-muted);
     margin-top: 0;
 }
 
 /* Paragraph */
 
 p {
-    text-align: justify;
-    color: #444;
+    color: var(--color-text);
 }
 
 /* Lists */
@@ -95,7 +141,7 @@ li {
 
 hr {
     border: none;
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid var(--border-color);
     margin: 40px 0;
 }
 
@@ -120,26 +166,53 @@ embed {
 
 footer {
     text-align: center;
-    color: #666;
+    color: var(--color-muted);
     font-size: 14px;
     margin-top: 50px;
 }
 
 /* Responsive */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    body{
-        margin:15px;
-        padding:25px;
+    body {
+        margin: 15px;
+        padding: 25px;
     }
 
-    h1{
-        font-size:30px;
+    h1 {
+        font-size: 30px;
     }
 
-    h2{
-        font-size:22px;
+    h2 {
+        font-size: 22px;
     }
 
+}
+
+/* Print */
+
+@media print {
+
+    html,
+    body {
+        background: none;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    embed {
+        border: none;
+    }
 }
