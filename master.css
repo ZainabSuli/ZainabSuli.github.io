@@ -14,15 +14,15 @@
 /* Design Tokens */
 
 :root {
-    --color-heading: #0f172a;
-    --color-subheading: #1f2e2e;
-    --color-text: #334d4d;
-    --color-muted: #667788;
-    --color-accent: #fca312;
-    --color-link: #0a66c2;
+    --color-heading: #26190d;
+    --color-subheading: #392513;
+    --color-text: #4d3119;
+    --color-muted: #392513;
+    --color-accent: #bf7b40;
+    --color-link: #0f3b5f;
 
-    --bg-page: #e0ebeb;
-    --bg-card: #f0f5f5;
+    --bg-page: #f3e5d8;
+    --bg-card: #f9f2eb;
 
     --border-color: #d9d9d9;
 }
@@ -95,7 +95,7 @@ h1 {
 
 h2 {
     color: var(--color-subheading);
-    border-bottom: 1px solid var(--color-subheading);
+    border-bottom: 1px solid #86562d;
     padding-bottom: 8px;
     margin-top: 45px;
     margin-bottom: 20px;
@@ -103,13 +103,13 @@ h2 {
 }
 
 h3 {
-    color: #222;
+    color: ##392513;
     margin-top: 25px;
     margin-bottom: 8px;
 }
 
 h4 {
-    color: #555;
+    color: ##392513;
     margin-top: 5px;
     margin-bottom: 15px;
 }
@@ -123,6 +123,8 @@ h5 {
 
 p {
     color: var(--color-text);
+     text-align: justify;
+
 }
 
 /* Lists */
@@ -169,6 +171,8 @@ footer {
     color: var(--color-muted);
     font-size: 14px;
     margin-top: 50px;
+    border-top: 1px solid #86562d;
+
 }
 
 /* Responsive */
