@@ -1,36 +1,17 @@
+
 /* ==========================
    Zainab Resume
-   Professional CSS
+   Professional CV Design
+   Navy Blue & Professional Blue
 ========================== */
 
-/* Reset / Box sizing */
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* Design Tokens */
-
-:root {
-    --color-heading: #26190d;
-    --color-subheading: #392513;
-    --color-text: #4d3119;
-    --color-muted: #392513;
-    --color-accent: #bf7b40;
-    --color-link: #0f3b5f;
-
-    --bg-page: #f3e5d8;
-    --bg-card: #f9f2eb;
-
-    --border-color: #d9d9d9;
-}
-
-/* Page */
+/* ==========================
+   Page
+========================== */
 
 html {
-    background-color: var(--bg-page);
+    background-color: #F1F4F8;
 }
 
 body {
@@ -38,96 +19,90 @@ body {
     margin: 40px auto;
     padding: 45px;
 
-    background: var(--bg-card);
-    color: var(--color-text);
+    background: #FFFFFF;
+    color: #374151;
 
-    font-family: "Segoe UI", "Tajawal", "Cairo", Tahoma, Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     line-height: 1.8;
 
     border-radius: 12px;
-
-    text-align: left; /* بدّليها left/right حسب اتجاه المحتوى الأساسي */
+    box-shadow: 0 8px 30px rgba(23, 43, 77, 0.08);
 }
 
-/* Header block - يلف الاسم والمسمى الوظيفي */
 
-.resume-header {
-    text-align: center;
-}
-
-/* Visually hidden - نص للقارئات الصوتية فقط، مخفي بصريًا */
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-}
-
-/* Links */
+/* ==========================
+   Links
+========================== */
 
 a {
-    color: var(--color-link);
+    color: #2878A8;
     text-decoration: none;
     font-weight: 600;
-    transition: color .3s ease;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--color-accent);
+    color: #172B4D;
 }
 
-a:focus-visible {
-    outline: 2px solid var(--color-link);
-    outline-offset: 2px;
-    border-radius: 2px;
-}
 
-/* Headings */
+/* ==========================
+   Headings
+========================== */
 
 h1 {
-    color: var(--color-heading);
+    text-align: center;
+    color: #172B4D;
     font-size: 40px;
     margin-bottom: 8px;
+    font-weight: 700;
 }
 
 h2 {
-    color: var(--color-subheading);
-    border-bottom: 1px solid #86562d;
+    color: #172B4D;
+    border-bottom: 2px solid #2878A8;
+
     padding-bottom: 8px;
     margin-top: 45px;
     margin-bottom: 20px;
+
     font-size: 28px;
+    font-weight: 700;
 }
 
 h3 {
-    color: ##392513;
+    color: #24364B;
     margin-top: 25px;
     margin-bottom: 8px;
+    font-weight: 600;
 }
 
 h4 {
-    color: ##392513;
+    color: #526174;
     margin-top: 5px;
     margin-bottom: 15px;
 }
 
 h5 {
-    color: var(--color-muted);
+    color: #718096;
     margin-top: 0;
 }
 
-/* Paragraph */
+
+/* ==========================
+   Paragraph
+========================== */
 
 p {
-    color: var(--color-text);
-     text-align: justify;
-
+    text-align: justify;
+    color: #374151;
+    margin-bottom: 15px;
 }
 
-/* Lists */
+
+/* ==========================
+   Lists
+========================== */
 
 ul,
 ol {
@@ -137,45 +112,59 @@ ol {
 li {
     margin-bottom: 10px;
     text-align: justify;
+    color: #374151;
 }
 
-/* Horizontal line */
+
+/* ==========================
+   Horizontal Line
+========================== */
 
 hr {
     border: none;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid #DCE5ED;
     margin: 40px 0;
 }
 
-/* PDF */
+
+/* ==========================
+   PDF Viewer
+========================== */
 
 embed {
     width: 100%;
     height: 450px;
 
-    border: 1px solid #ddd;
+    border: 1px solid #DCE5ED;
     border-radius: 8px;
 }
 
-/* Container */
+
+/* ==========================
+   Container
+========================== */
 
 .container {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-/* Footer */
+
+/* ==========================
+   Footer
+========================== */
 
 footer {
     text-align: center;
-    color: var(--color-muted);
+    color: #718096;
     font-size: 14px;
     margin-top: 50px;
-    border-top: 1px solid #86562d;
-
 }
 
-/* Responsive */
+
+/* ==========================
+   Responsive Design
+========================== */
 
 @media (max-width: 768px) {
 
@@ -190,33 +179,61 @@ footer {
 
     h2 {
         font-size: 22px;
+        margin-top: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p,
+    li {
+        text-align: left;
     }
 
 }
 
-/* Print */
+
+/* ==========================
+   Print / PDF Settings
+========================== */
 
 @media print {
 
-    html,
+    html {
+        background: #FFFFFF;
+    }
+
     body {
-        background: none;
         max-width: 100%;
         margin: 0;
-        padding: 0;
+        padding: 20px;
+
+        box-shadow: none;
         border-radius: 0;
+
+        color: #374151;
     }
 
     a {
-        color: inherit;
-        text-decoration: none;
+        color: #2878A8;
     }
 
-    .no-print {
-        display: none;
+    h2 {
+        break-after: avoid;
     }
 
-    embed {
-        border: none;
+    h3 {
+        break-after: avoid;
     }
+
+    p,
+    li {
+        break-inside: avoid;
+    }
+
+    hr {
+        border-color: #DCE5ED;
+    }
+
 }
